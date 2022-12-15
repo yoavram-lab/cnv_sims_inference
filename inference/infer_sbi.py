@@ -214,7 +214,7 @@ for i in range(obs_file.shape[0]):
     mut_95hdi_low,mut_95hdi_high = pyabc.visualization.credible.compute_credible_interval(vals=mut_samples, weights=None)
     # save relevant values
     f= open(path + out + "_est_real_params.csv","a+")
-    f.write(EvoModel+',NPE,' + presim_data + ','.join(str(format(j)) 
+    f.write(EvoModel+',NPE,' + presim_data + ',' + ','.join(str(format(j)) 
                                       for j in
                                       (true_params[0],s_est,true_params[1],
                                        μ_est,s_snv,m_snv,rmse_map,
